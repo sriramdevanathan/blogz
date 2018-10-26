@@ -1,0 +1,10 @@
+{% extends "base.html" %}
+{% block content %}
+      <h1>The Current Alphabet Soups Served!</h1>
+      {% for blog in blogs: %}
+        <span class="blog-list-title"><h2> <a href="/blog?id={{ blog.id }}"> {{ blog.title }} </a>  </h2></span>
+         <span class="blog-list-body"><p>{{ blog.body }}</p></span>
+          <span class="written-by">Orignially Thought and Thrown up by  
+         <a href="/blog?user={{ blog.owner.id }}">  {{ blog.owner.username }} </a> </span>
+      {% endfor %}
+{% endblock %}

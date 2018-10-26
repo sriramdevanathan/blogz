@@ -1,0 +1,25 @@
+{% extends "base.html" %}
+
+{% block content %}
+    <h1>GET ME IN</h1>
+      
+    <form action="/login", method="POST">
+        <tr>
+            <td><p>LOGIN NAME</p></td>
+            <td><input name="username" type="text" value='{{ username }}'></td>    
+            <td><p class='error'> {{ usernameerror }} </p></td>
+        </tr>
+        <tr>    
+            <td><p>SECRET CODE</p></td>
+            <td><input name="password" type="password"></td>
+            <td><p class='error'> {{ passworderror }} </p></td>
+        </tr>
+        
+        <input type="submit" value= "See if the key fits the lock!">
+        <p>Haven't Been Here B4? <a href="signup">JOIN IN!</a></p>  
+    </form>
+    
+{% endblock %}
+
+
+

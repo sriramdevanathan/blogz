@@ -1,0 +1,82 @@
+<!doctype html>
+<html>
+    <head>
+        <title>{{title}}</title>
+        <style type="text/css">
+            .error {
+                color: red;
+                font-style: italic;
+                font-family: sans-serif;
+            }
+            body{
+                
+                background-color: orange;
+                padding-left: 8em;
+                padding-right: 8em;
+                padding-top: 1em;
+                font-family: Helvetica, Arial, Verdana, sans-serif;
+            }
+            nav {
+                padding-bottom: .5em;
+                font-family: Helvetica, Arial, Verdana, sans-serif;
+            }
+            .left-table{
+                float: left;
+            }
+            .right-table{
+                float: right;
+            }
+            td { 
+                padding-right: 1em;
+            }
+            .blog-list-title{
+                padding-top: 100;
+                font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+
+            }
+            .blog-list-body{
+                font-family: Helvetica, Arial, Verdana, sans-serif;
+            }
+            .blog-body{
+                font-family: Helvetica, Arial, Verdana, sans-serif;
+            }
+            h1{
+                font-family: Helvetica, Arial, Verdana, sans-serif;
+                padding-top: 1em;
+            }
+            h3{
+                padding-top: 2em;
+                font-family: Helvetica, Arial, Verdana, sans-serif;
+            }
+            .written-by{
+                font-style: italic;
+                font-size: .75em;
+                font-family: Helvetica, Arial, Verdana, sans-serif; 
+            }
+            hr {
+                margin: 20px auto;
+            }
+        </style>
+    </head>
+<body>
+    <nav>
+    <table class="left-table">
+    <tr>
+        <td><a href='/'>HOME</a></td>   
+        <td><a href='/blog'>ALL RANTS</a></td>   
+        <td><a href='/newpost'>NEW WORD VOMIT</a></td>
+    </tr>
+    </table>
+    <table class="right-table">
+    <tr>
+        <td><a href='/login'>TRY and GETIN</a></td>   
+        <td><a href='/logout'>GETOUT</a></td>
+    </tr>
+    </table>
+    </nav>
+
+    {% block content %}
+    {% endblock %}
+
+</body>
+</html>

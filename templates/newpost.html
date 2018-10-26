@@ -1,0 +1,18 @@
+{% extends "base.html" %}
+
+{% block content %}
+    <h1>The RECENT PoSt</h1>
+      
+    <form action="/newpost", method="POST">
+        <p>What do you want to call it?</p>
+        <input name="title" type="text" value='{{ title }}'>
+        <p class='error'> {{ titleblank }} </p>
+        
+        <p>What is the message you want to send to the world and enlighten it?</p>
+        <textarea name="body" rows="16" cols="46">{{ body }}</textarea>
+        <p class='error'> {{ bodyblank }} </p>
+
+        <input type="submit" value= "SPILL THE BEANS">  
+    </form>
+    
+{% endblock %}

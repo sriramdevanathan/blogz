@@ -1,0 +1,17 @@
+{% extends "base.html" %}
+
+{% block content %}
+
+{% if authors|length == 0 %}
+    <h1>Hey Yuuu bee the first 1!</h1>
+{% else %}
+    <h1>The List of B (lo)uggers!</h1>
+    <ul>
+    {% for author in authors %}
+        <li><a href="/blog?user={{ author.id }}"> {{ author.username }}</a></li>
+    {% endfor %}
+    </ul>
+{% endif %}
+
+
+{% endblock %}

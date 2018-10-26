@@ -1,0 +1,11 @@
+{% extends "base.html" %}
+
+{% block content %}
+      <h3> {{ blog.title }} </h3>
+      
+      <span class="blog-body"><p>{{ blog.body }}</p></span>
+
+      <span class="written-by"> Orignially Thought and Thrown up by
+      <a href="/blog?user={{ blog.owner.id }}" >  {{ blog.owner.username }} </a> </span>
+
+{% endblock %}
